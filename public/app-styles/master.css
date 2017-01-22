@@ -17,34 +17,40 @@ h5 {
     font-family: 'Poppins', sans-serif;
     color: #fff;
 }
-.wrapper{
+
+.wrapper {
     opacity: 0;
     transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
     -ms-transition: all 0.5s linear;
 }
-.wrapper.ready{
+
+.wrapper.ready {
     opacity: 1;
 }
-.loading{
+
+.loading {
     width: 10vw;
     height: 10vw;
     max-width: 100px;
     max-height: 100px;
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
 }
-.loading img{
+
+.loading img {
     height: 100%;
 }
-.wrapper.ready ~ .loading{
+
+.wrapper.ready ~ .loading {
     display: none;
 }
+
 .full-width {
     max-width: 100%;
 }
@@ -88,6 +94,9 @@ h5 {
 }
 
 @media only screen and (max-width: 768px) {
+    .full-height {
+        min-height: 150vw;
+    }
     .center-align-small {
         text-align: center !important;
     }
@@ -174,7 +183,6 @@ Accordian
     -moz-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
     -ms-transition: all 0.3s ease-in;
-    
 }
 
 .accordian-item.active .accordian-arrow {
@@ -481,11 +489,13 @@ Grid hover effect
     opacity: 1;
     bottom: 0px;
 }
+
 @media only screen and (max-width: 768px) {
-    .grid{
+    .grid {
         margin-top: 5px;
     }
 }
+
 
 /************************************************************************************
 Menu bar
@@ -737,7 +747,7 @@ Search section
 
 
 /************************************************************************************
-Home section
+Scroll anchor
 ************************************************************************************/
 
 .scroll-anchor {
@@ -766,9 +776,9 @@ Home section
 
 @media only screen and (max-width: 768px) {
     .scroll-anchor {
-        background: rgba(0,0,0,0.7);
+        background: rgba(0, 0, 0, 0.7);
         font-size: 15px;
-        color: rgba(255,255,255,0.7);
+        color: rgba(255, 255, 255, 0.7);
     }
 }
 
@@ -859,7 +869,11 @@ Company section
     margin-top: 30%;
 }
 
-
+@media only screen and (max-width: 768px) {
+    .company-landing > div > div {
+        margin-top: 40%;
+    }
+}
 /************************************************************************************
 Resource section
 ************************************************************************************/
@@ -893,7 +907,11 @@ Resource section
     z-index: 1;
     margin-top: 30%;
 }
-
+@media only screen and (max-width: 768px) {
+    .resource-landing > div > div {
+        margin-top: 40%;
+    }
+}
 
 /************************************************************************************
 Contact section
@@ -927,4 +945,9 @@ Contact section
 .contact-landing > div > div {
     z-index: 1;
     margin-top: 30%;
+}
+@media only screen and (max-width: 768px) {
+    .contact-landing > div > div {
+        margin-top: 40%;
+    }
 }
