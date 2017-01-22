@@ -6,18 +6,7 @@ define(['foundation'], function () {
             , link: function (scope, element, attrs) {
                 angular.element(element).ready(function () {
                     angular.element(element).foundation();
-                    //                    var accordians = angular.element(element).find('.accordian-item');
-                    //                    for (var i = 0; i < accordians.length; i++) {
-                    //                        $(accordians[i]).find('.accordian-header').click(function () {
-                    //                            if ($(this).parent().hasClass('active')) {
-                    //                                $(this).parent().removeClass('active');
-                    //                            }
-                    //                            else {
-                    //                                $(this).parent().addClass('active');
-                    //                            }
-                    //                        });
-                    //                    }
-                    $('.accordian-header').click(function () {
+                    $(document).on('click', 'div.accordian-header', function () {
                         if ($(this).parent().hasClass('active')) {
                             $(this).parent().removeClass('active');
                         }
@@ -57,6 +46,8 @@ define(['foundation'], function () {
                             scrollTop: 0
                         }, 500);
                     });
+                    // Hide wrapper till assets load
+                    $('.wrapper').addClass('ready');
                 });
             }
         };
