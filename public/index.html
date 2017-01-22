@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
+    <script src="https://use.fontawesome.com/02fbf170e5.js"></script>
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+    <link rel="stylesheet" href="app-styles/master.css"> </head>
+<!-- Start of freelancer810 Zendesk Widget script -->
+<script>
+    /*<![CDATA[*/
+    window.zEmbed || function (e, t) {
+        var n, o, d, i, s, a = []
+            , r = document.createElement("iframe");
+        window.zEmbed = function () {
+            a.push(arguments)
+        }, window.zE = window.zE || window.zEmbed, r.src = "javascript:false", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "display: none", d = document.getElementsByTagName("script"), d = d[d.length - 1], d.parentNode.insertBefore(r, d), i = r.contentWindow, s = i.document;
+        try {
+            o = s
+        }
+        catch (e) {
+            n = document.domain, r.src = 'javascript:var d=document.open();d.domain="' + n + '";void(0);', o = s
+        }
+        o.open()._l = function () {
+            var o = this.createElement("script");
+            n && (this.domain = n), o.id = "js-iframe-async", o.src = e, this.t = +new Date, this.zendeskHost = t, this.zEQueue = a, this.body.appendChild(o)
+        }, o.write('<body onload="document._l();">'), o.close()
+    }("https://assets.zendesk.com/embeddable_framework/main.js", "freelancer810.zendesk.com");
+    /*]]>*/
+</script>
+<!-- End of freelancer810 Zendesk Widget script -->
+
+<body>
+    <div class="wrapper" app-directive ng-controller="mainController as main" ng-cloak>
+        <!-- Search section -->
+        <div class="search-container hide-for-small-only">
+            <div class="row">
+                <div class="small-12 medium-12 large-12 columns text-right">
+                    <br/>
+                    <p class="color-dirty">{{main.clock | date : "h:mm:ss a EEEE, MMMM d, y"}}</p>
+                </div>
+            </div>
+            <div class="row search-input">
+                <div class="small-12 medium-12 large-12 columns">
+                    <div class="group">
+                        <input type="search" placeholder="What're we looking for ?" /> </div>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-12 medium-12 large-12 columns text-center"> <a class="color-dirty toggle-search"><span><i class="fa fa-fw" aria-hidden="true">&#xf062;</i></span><br/><small>COLLAPSE</small></a> </div>
+            </div>
+        </div>
+        <!--Navigation-->
+        <nav class="top-bar menu-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1>
+                        <a href="#">
+                            <div class="logo"></div>
+                        </a>
+                    </h1> </li>
+                <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                <li class="toggle-topbar menu-icon"><a href="#"><span><i class="fa fa-fw" aria-hidden="true">&#xf290;</i>&nbsp;&nbsp;</span></a></li>
+            </ul>
+            <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                    <li class="menu-link"><a class="underline" ui-sref="home">Home</a></li>
+                    <li class="menu-saperator hide-for-small-only"><a>.</a></li>
+                    <li class="menu-link"><a class="underline" ui-sref="company">Company</a></li>
+                    <li class="menu-saperator hide-for-small-only"><a>.</a></li>
+                    <li class="menu-link"><a class="underline" ui-sref="resource">Resource</a></li>
+                    <li class="menu-saperator hide-for-small-only"><a>.</a></li>
+                    <li class="menu-link"><a class="underline" ui-sref="contact">Contact</a></li>
+                    <li class="menu-saperator hide-for-small-only"><a>.</a></li>
+                    <li class="menu-link"><a class="underline" href="http://app.accern.com">login</a></li>
+                    <li class="menu-search hide-for-small-only"><a class="toggle-search"><i class="fa fa-fw" aria-hidden="true">&#xf002;</i></a></li>
+                    <li class="search-box show-for-small-only">
+                        <form>
+                            <input type="text" placeholder="Search..." />
+                            <button><i class="fa fa-fw" aria-hidden="true">&#xf002;</i></button>
+                        </form>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+        <!-- Hidden navbar -->
+        <nav class="top-bar menu-bar menu-bar-hidden hide-for-small-only" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1>
+                        <a href="#">
+                            <div class="logo"></div>
+                        </a>
+                    </h1> </li>
+                <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                <li class="toggle-topbar menu-icon"><a href="#"><span><i class="fa fa-fw" aria-hidden="true">&#xf290;</i>&nbsp;&nbsp;</span></a></li>
+            </ul>
+            <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                    <li class="menu-link"><a class="underline" ui-sref="home">Home</a></li>
+                    <li class="menu-saperator hide-for-small-only"><a>.</a></li>
+                    <li class="menu-link"><a class="underline" ui-sref="company">Company</a></li>
+                    <li class="menu-saperator hide-for-small-only"><a>.</a></li>
+                    <li class="menu-link"><a class="underline" ui-sref="resource">Resource</a></li>
+                    <li class="menu-saperator hide-for-small-only"><a>.</a></li>
+                    <li class="menu-link"><a class="underline" ui-sref="contact">Contact</a></li>
+                    <li class="menu-saperator hide-for-small-only"><a>.</a></li>
+                    <li class="menu-link"><a class="underline" href="http://app.accern.com">login</a></li>
+                    <li class="menu-search hide-for-small-only"><a class="toggle-search"><i class="fa fa-fw" aria-hidden="true">&#xf002;</i></a></li>
+                    <li class="search-box show-for-small-only">
+                        <form>
+                            <input type="text" placeholder="Search..." />
+                            <button><i class="fa fa-fw" aria-hidden="true">&#xf002;</i></button>
+                        </form>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+        <!-- Content -->
+        <div class="content" ui-view></div>
+        <!-- Scroll anchor -->
+        <div class="scroll-anchor"><i class="fa fa-fw" aria-hidden="true">&#xf106;</i></div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="row">
+                <div class="small-12 medium-6 large-6 columns text-left center-align-small"> <img src="https://www.accern.com/wp-content/uploads/2017/01/accernlogosquare-4.png" width="73" height="55" alt="logo" /> </div>
+                <div class="small-12 medium-6 large-6 columns text-right center-align-small">
+                    <h4><small class="color-dirty">Copyright 2017 ACCERN CORPORATION</small></h4> </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Require JS File/ Entry point for all the script files -->
+    <script data-main="main" src="bower_components/requirejs/require.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "accern",
+  "version": "1.0.0",
+  "description": "Accern web development task",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soumen-saniel/accern.git"
+  },
+  "author": "soumen saniel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soumen-saniel/accern/issues"
+  },
+  "homepage": "https://github.com/soumen-saniel/accern#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

@@ -1,0 +1,884 @@
+/************************************************************************************
+Generic classes
+************************************************************************************/
+
+body {
+    background: #000;
+}
+
+body,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.full-width {
+    max-width: 100%;
+}
+
+.full-height {
+    min-height: 100vh;
+}
+
+.row-padding {
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+}
+
+.hr-short {
+    width: 110px;
+}
+
+.saperator-short {
+    border: solid rgb(242, 78, 78);
+    border-width: 5px 0 0;
+    clear: both;
+    height: 0;
+    width: 110px;
+    margin-left: 0px;
+}
+
+.color-dirty {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.color-red {
+    color: rgb(242, 78, 78);
+}
+
+.background-light {
+    background: rgb(14, 14, 14);
+}
+
+.no-padding {
+    padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .center-align-small {
+        text-align: center !important;
+    }
+    .center-align-small > .saperator-short,
+    .center-align-small > .hr-short {
+        display: block;
+        -webkit-margin-before: 0.5em;
+        -webkit-margin-after: 0.5em;
+        -webkit-margin-start: auto;
+        -webkit-margin-end: auto;
+    }
+}
+
+
+/************************************************************************************
+Buttons
+************************************************************************************/
+
+.btn-red,
+.btn-red:active,
+.btn-red:focus,
+.btn-red:visited {
+    background: rgb(242, 78, 78);
+}
+
+.btn-red:hover {
+    background: rgb(191, 42, 42);
+}
+
+.btn-red-transparent,
+.btn-red-transparent:active,
+.btn-red-transparent:focus,
+.btn-red-transparent:visited {
+    background: transparent;
+    border: 2px solid rgb(191, 42, 42);
+    color: rgb(191, 42, 42);
+}
+
+.btn-red-transparent:hover {
+    background: rgb(242, 78, 78);
+    border: 2px solid rgb(242, 78, 78);
+    color: #fff;
+}
+
+.btn-transparent,
+.btn-transparent:active,
+.btn-transparent:focus,
+.btn-transparent:visited {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+.btn-transparent:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media only screen and (max-width: 768px) {}
+
+
+/************************************************************************************
+Accordian
+************************************************************************************/
+
+.custom-accordian {
+    list-style: none;
+    margin: 0px;
+}
+
+.accordian-item .accordian-header {
+    border-top: 2px solid #5e5e5e;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 15px 0 15px 0;
+}
+
+.accordian-item.active .accordian-header {}
+
+.accordian-item .accordian-arrow {
+    float: right;
+    transform: rotate(0deg);
+    transition: all 0.3s linear;
+}
+
+.accordian-item.active .accordian-arrow {
+    transform: rotate(180deg);
+}
+
+.accordian-item .accordian-data {
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0 30px;
+    transition: all 0.3s linear;
+}
+
+.accordian-item.active .accordian-data {
+    max-height: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+    .accordian-item .accordian-header {
+        font-size: 0.8em;
+    }
+}
+
+
+/************************************************************************************
+Input style
+************************************************************************************/
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.group input {
+    font-size: 14px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #5e5e5e;
+    background: transparent !important;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+.group input:focus {
+    outline: none;
+}
+
+.group label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+
+
+/* active state */
+
+.group input:focus ~ label,
+input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.group .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.group .bar:before,
+.group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.2s ease all;
+}
+
+.group .bar:before {
+    left: 50%;
+}
+
+.group .bar:after {
+    right: 50%;
+}
+
+
+/* active state */
+
+.group input:focus ~ .bar:before,
+.group input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.group .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+/* active state */
+
+.group input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+
+/****** Textarea ******/
+
+.group textarea {
+    font-size: 14px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #5e5e5e;
+    background: transparent !important;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+.group textarea:focus {
+    outline: none;
+}
+
+.group label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+
+
+/* active state */
+
+.group textarea ~ label {
+    top: calc(100% - 25px);
+}
+
+.group textarea:focus ~ label,
+textarea:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.group .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.group .bar:before,
+.group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.2s ease all;
+}
+
+.group .bar:before {
+    left: 50%;
+}
+
+.group .bar:after {
+    right: 50%;
+}
+
+
+/* active state */
+
+.group textarea:focus ~ .bar:before,
+.group textarea:focus ~ .bar:after {
+    width: 50%;
+}
+
+.group .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+/* active state */
+
+.group textarea:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+}
+
+
+/* ANIMATIONS ================ */
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+/************************************************************************************
+Grid hover effect
+************************************************************************************/
+
+.grid {
+    background: #181818;
+    height: 250px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    cursor: default;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+}
+
+.grid-light {
+    background: #202020;
+}
+
+.grid .img-container {
+    align-self: center;
+    height: 50%;
+    width: 100%;
+    padding: 5%;
+    transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+}
+
+.grid .img-container > img {
+    height: 100%;
+    transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+}
+
+.grid .img-caption {
+    position: absolute;
+    opacity: 0;
+    bottom: 20px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+}
+
+.grid:hover {
+    background: rgb(242, 78, 78);
+}
+
+.grid:hover .img-container > img {
+    height: 80%;
+}
+
+.grid:hover .img-caption {
+    opacity: 1;
+    bottom: 0px;
+}
+@media only screen and (max-width: 768px) {
+    .grid{
+        margin-top: 5px;
+    }
+}
+
+/************************************************************************************
+Menu bar
+************************************************************************************/
+
+.logo {
+    background-image: url('https://www.accern.com/wp-content/uploads/2017/01/accernlogosquare-4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px;
+    width: 120px;
+    height: 75px;
+}
+
+.menu-bar {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background: transparent;
+    height: 75px;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.menu-bar > section > ul {
+    padding: 15px;
+}
+
+.menu-bar > section > ul > li {
+    background: transparent !important;
+}
+
+.menu-bar > section > ul > li > a {
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 1.5em;
+    background: transparent !important;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu-bar > section > ul > li.menu-link > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.menu-bar > section > ul > li.menu-link > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.menu-bar > section > ul > li.menu-saperator > a {
+    padding: 0px !important;
+    font-size: 25px;
+    margin-top: -6px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.menu-bar > section > ul > li.menu-search > a {
+    font-size: 1.5em;
+}
+
+.menu-bar .menu-icon > a {
+    font-size: 20px;
+}
+
+.top-bar .toggle-topbar.menu-icon a span::after {
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    margin-top: -9px;
+    top: 50%;
+    right: 0.9375rem;
+    box-shadow: 0 0 0 1px #FFFFFF, 0 8px 0 1px #FFFFFF, 0 16px 0 1px #FFFFFF;
+    width: 24px;
+}
+
+.expanded > section > ul > li {
+    border-bottom: 1px solid #424242;
+}
+
+.menu-bar > section > ul > li.search-box input[type="text"] {
+    background-color: #424242;
+    border: none;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 62px 0 10px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.menu-bar > section > ul > li.search-box button {
+    position: absolute;
+    background: transparent;
+    width: 0px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    top: 205px;
+    right: 50px;
+    color: #888888;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-bar {
+        position: relative;
+        width: 100%;
+        background: #252525;
+        height: 75px;
+    }
+    .menu-bar .title-area,
+    .top-bar.expanded .title-area {
+        height: 75px;
+        background: #252525;
+    }
+    .menu-bar > section > ul {
+        padding: 15px;
+        background: #252525;
+        border-top: 1px solid #424242;
+    }
+    .expanded > section > ul {
+        padding: 10px 50px 40px 50px;
+    }
+    .menu-bar > section > ul > li {
+        background: #252525 !important;
+    }
+    .menu-bar > section > ul > li > a {
+        background: #252525 !important;
+    }
+    .expanded > section > ul > li > a {
+        padding-left: 0px;
+        font-size: 14px;
+        line-height: 1em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        color: #d6d6d6;
+    }
+    .menu-bar > section > ul > li.menu-saperator > a {
+        padding: 0px !important;
+        font-size: 25px;
+        margin-top: -6px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .menu-bar > section > ul > li.menu-search > a {
+        font-size: 1.5em;
+    }
+}
+
+
+/* Menubar dark revel on scroll */
+
+.menu-bar-hidden {
+    position: fixed;
+    background: #252525;
+    top: -90px;
+    transition: all 0.3s linear;
+    z-index: 1;
+}
+
+.menu-bar-hidden.active {
+    top: 0px;
+}
+
+.menu-bar-hidden > section > ul > li {
+    background: #252525 !important;
+}
+
+.menu-bar-hidden > section > ul > li > a {
+    background: #252525 !important;
+}
+
+.menu-bar-hidden > section > ul > li.search-box button {
+    background: #252525;
+}
+
+
+/************************************************************************************
+Search section
+************************************************************************************/
+
+.content,
+.menu-bar,
+.footer {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -o-filter: blur(0px);
+    filter: blur(0px);
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+}
+
+.search-container {
+    background: rgba(0, 0, 0, 0.7);
+    height: 0px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    opacity: 0;
+    z-index: 0;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+}
+
+.search-container.active {
+    height: 100vh;
+    opacity: 1;
+    z-index: 10;
+}
+
+.search-container.active ~ .content,
+.search-container.active ~ .menu-bar,
+.search-container.active ~ .footer {
+    -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -ms-filter: blur(50px);
+    -o-filter: blur(50x);
+    filter: blur(50px);
+}
+
+.search-input {
+    margin-top: 30vh;
+}
+
+.search-input input[type="search"] {
+    font-size: 2em;
+}
+
+
+/************************************************************************************
+Home section
+************************************************************************************/
+
+.scroll-anchor {
+    position: fixed;
+    z-index: 4;
+    background: #ccc;
+    font-size: 23px;
+    font-weight: bold;
+    padding: 10px 12px;
+    color: #848484;
+    border-radius: 50%;
+    bottom: 10px;
+    right: -50px;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+}
+
+.scroll-anchor.active {
+    right: 10px;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .scroll-anchor {
+        background: rgba(0,0,0,0.7);
+        font-size: 15px;
+        color: rgba(255,255,255,0.7);
+    }
+}
+
+
+/************************************************************************************
+Home section
+************************************************************************************/
+
+.home-landing {
+    background-image: url('https://www.accern.com/wp-content/uploads/2017/01/redlady_black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-landing:before {
+    z-index: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    bottom: -50px;
+    background-color: #000;
+    transform: skewY(4deg);
+    -webkit-transform: skewY(4deg);
+    -moz-transform: skewY(4deg);
+    -o-transform: skewY(4geg);
+    -ms-transform: skewY(4deg);
+}
+
+.home-landing > div > div {
+    z-index: 1;
+    margin-top: 30%;
+}
+
+.large-icons {
+    color: rgb(242, 78, 78);
+    font-size: 4em;
+    height: 90px;
+    transition: all 0.2s linear;
+}
+
+.large-icons:hover {
+    font-size: 3.5em;
+}
+
+@media only screen and (max-width: 768px) {
+    .home-landing > div > div {
+        margin-top: 40%;
+    }
+}
+
+
+/************************************************************************************
+Company section
+************************************************************************************/
+
+.company-landing {
+    background-image: url('https://www.accern.com/wp-content/uploads/2017/01/59242777_l-copy-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.company-landing:before {
+    z-index: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    bottom: -50px;
+    background-color: #000;
+    transform: skewY(-4deg);
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-4deg);
+    -o-transform: skewY(-4geg);
+    -ms-transform: skewY(-4deg);
+}
+
+.company-landing > div > div {
+    z-index: 1;
+    margin-top: 30%;
+}
+
+
+/************************************************************************************
+Resource section
+************************************************************************************/
+
+.resource-landing {
+    background-image: url(https://www.accern.com/wp-content/uploads/2017/01/edit59388790_l-copy.jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.resource-landing:before {
+    z-index: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    bottom: -50px;
+    background-color: #000;
+    transform: skewY(-4deg);
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-4deg);
+    -o-transform: skewY(-4geg);
+    -ms-transform: skewY(-4deg);
+}
+
+.resource-landing > div > div {
+    z-index: 1;
+    margin-top: 30%;
+}
+
+
+/************************************************************************************
+Contact section
+************************************************************************************/
+
+.contact-landing {
+    background-image: url(https://www.accern.com/wp-content/uploads/2017/01/test123.jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-landing:before {
+    z-index: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    bottom: -50px;
+    background-color: #000;
+    transform: skewY(-4deg);
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-4deg);
+    -o-transform: skewY(-4geg);
+    -ms-transform: skewY(-4deg);
+}
+
+.contact-landing > div > div {
+    z-index: 1;
+    margin-top: 30%;
+}
