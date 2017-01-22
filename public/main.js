@@ -1,4 +1,5 @@
 require.config({
+    waitSeconds: 200,
     paths : {
         'jquery': 'bower_components/foundation/js/vendor/jquery',
         'fastclick': 'bower_components/fastclick/lib/fastclick',
