@@ -13,6 +13,3 @@ The website is a single page web application made in Angular Js. The server is c
 7. Routing module - ui-router 0.4.2
 8. Script manager/ dependency manager - Require JS 2.3.2
 
-## Work flow
-
-
