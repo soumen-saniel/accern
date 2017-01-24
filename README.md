@@ -17,34 +17,46 @@ The website is a single page web application made in Angular Js. The server is c
 
 ## Folder structure
 <ul>
-<li>node_modules</li>
-<li>public</li>
-<ul>
-<li>bower_components</li>
-<li>app-styles</li>
-<li>app-scripts</li>
-<ul>
-<li>config</li>
-<li>controllers</li>
-<li>directives</li>
-<li>appReferences.js</li>
-<li>coreModule.js</li>
-</ul>
-<li>views</li>
-<ul>
-<li>home.html</li>
-<li>company.html</li>
-<li>resource.html</li>
-<li>contact.html</li>
-</ul>
-<li>img</li>
-<li>bower.json</li>
-<li>main.js</li>
-<li>index.html</li>
-</ul>
-<li>package.json</li>
-<li>README.md</li>
-<li>server.js</li>
+	<li>node_modules</li>
+	<li>public</li>
+	<ul>
+		<li>bower_components</li>
+		<li>app-styles</li>
+			<ul>
+			<li>master.css</li>
+			</ul>
+		<li>app-scripts</li>
+		<ul>
+			<li>config</li>
+				<ul>
+				<li>appConfig.js</li>
+				</ul>
+			<li>controllers</li>
+				<ul>
+				<li>mainController.js</li>
+				</ul>
+			<li>directives</li>
+				<ul>
+				<li>appDirective.js</li>
+				</ul>
+			<li>appReferences.js</li>
+			<li>coreModule.js</li>
+		</ul>
+		<li>views</li>
+			<ul>
+			<li>home.html</li>
+			<li>company.html</li>
+			<li>resource.html</li>
+			<li>contact.html</li>
+			</ul>
+		<li>img</li>
+		<li>bower.json</li>
+		<li>main.js</li>
+		<li>index.html</li>
+	</ul>
+	<li>package.json</li>
+	<li>README.md</li>
+	<li>server.js</li>
 </ul>
 The _public_ folder contains all the client side code which is hosted as static resource by Express.
 
