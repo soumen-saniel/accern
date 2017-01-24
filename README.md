@@ -6,13 +6,13 @@ The website is a single page web application made in Angular Js. The server is c
 
 ## Technology stack
 1. Client side library manager - Bower.
-2. UI framework - ZURB Foundation 5.5.3
-3. Fonts - Google fonts Poppins|Roboto
-4. Font icons - Fontawesome
-5. Javascript library - Jquery 3.1.1
-6. Javascript framework - Angular 1.6.1
-7. Routing module - angular-route 1.6.1, angular-ui-router 0.4.2
-8. Script manager/ dependency manager - Require JS 2.3.2
+2. UI framework - ZURB Foundation 5.5.3 (Dependency - jquery-placeholder, jquery.cookie, fastclick).
+3. Fonts - Google fonts Poppins|Roboto.
+4. Font icons - Fontawesome.
+5. Javascript library - Jquery 3.1.1.
+6. Javascript framework - Angular 1.6.1.
+7. Routing module - angular-route 1.6.1, angular-ui-router 0.4.2.
+8. Script manager/ dependency manager - Require JS 2.3.2.
 9. Zendesk widget.
 
 ## Folder structure
