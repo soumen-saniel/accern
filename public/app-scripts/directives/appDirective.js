@@ -60,6 +60,7 @@ define(['foundation'], function () {
                                 }
                             }
                         }
+                        
                         // Animate circles on scroll
                         if($('.circle-animation').length > 0){
                             var ChT = $('.circle-animation').offset().top,
