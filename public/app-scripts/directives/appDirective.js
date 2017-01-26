@@ -49,17 +49,19 @@ define(['foundation'], function () {
                             $('.scroll-anchor').removeClass('active');
                         }
                         // Animate number on scroll
-                        var hT = $('#number-of-clients').offset().top,
-                            hH = $('#number-of-clients').outerHeight(),
-                            wH = $(window).height();
-                        if($(this).scrollTop() > (hT+hH-wH)){
-                            var num = Number($('#number-of-clients').text());
-                            if(num === 0){
-                                increment();
+                        if($('#number-of-clients').length > 0){
+                            var hT = $('#number-of-clients').offset().top,
+                                hH = $('#number-of-clients').outerHeight(),
+                                wH = $(window).height();
+                            if($(this).scrollTop() > (hT+hH-wH)){
+                                var num = Number($('#number-of-clients').text());
+                                if(num === 0){
+                                    increment();
+                                }
                             }
                         }
                         // Animate circles on scroll
-                        if($('.circle-animation')){
+                        if($('.circle-animation').length > 0){
                             var ChT = $('.circle-animation').offset().top,
                             ChH = $('.circle-animation').outerHeight();
                             if($(this).scrollTop() > (ChT - wH)){
